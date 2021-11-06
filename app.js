@@ -1,4 +1,3 @@
-const { response } = require('express')
 const express = require('express')
 const https = require('https')
 const api = require('./api').api
@@ -57,6 +56,3 @@ app.post('/', (req, res) => {
 app.listen(process.env.PORT || 3000, () => {
   console.log(`port running successfully`)
 })
-
-/*17c0e6c3e617ffc436bbcad32ed8ef4b-us20
-e02d18e387*/
