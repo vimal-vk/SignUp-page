@@ -1,0 +1,77 @@
+body {
+  left: 50%;
+  top: 50%;
+  margin: 0;
+  text-align: center;
+  background-color: blanchedalmond;
+  font-family: "Dongle", sans-serif;
+}
+
+.sign-up {
+  margin: 0 auto;
+  text-align: center;
+  height: 500px;
+  width: 500px;
+  background-color: aqua;
+  color: black;
+  box-shadow: 0px 10px 10px 0px rgba(97, 43, 43, 0.5);
+}
+
+input {
+  color: red;
+  font-weight: 800;
+  font-size: large;
+  margin: 20px auto;
+  padding: 10px;
+  text-align: center;
+  display: block;
+  border: 2px solid black;
+}
+
+input:hover {
+  border: 5px solid black;
+  transition: all 200ms ease;
+}
+
+button {
+  font-weight: 600;
+  padding: 10px;
+  background-color: black;
+  color: white;
+  border-radius: 12px;
+}
+
+button:hover {
+  color: white;
+  background-color: red;
+  box-shadow: 0px 5px 5px 0px rgba(7, 7, 7, 0.5);
+  cursor: pointer;
+}
+
+img {
+  background: transparent;
+  height: 100px;
+  width: 100px;
+}
+
+h1 {
+  padding-top: 30px;
+}
+
+.success {
+  color: green;
+}
+
+.failed {
+  color: red;
+}
+
+.copyright {
+  opacity: 0.7;
+}
+
+.try-again {
+  background-color: red;
+  color: white;
+  padding: 10px;
+}
