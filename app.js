@@ -39,14 +39,14 @@ app.post('/', (req, res) => {
   }
 
   var request = https.request(apiUrl, options, (response) => {
-    if (response.error_count === 0) {
-      res.sendFile(__dirname + '/success.html')
-    }
-    else {
-      res.sendFile(__dirname + '/failure.html')
-    }
     response.on("data", (data) => {
-      console.log(JSON.parse(data))
+      var responseData = JSON.parse(data)
+      if (responseData.error_count === 0) {
+        res.sendFile(__dirname + '/success.html')
+      }
+      else {
+        res.sendFile(__dirname + '/failure.html')
+      }
     })
   })
   request.write(jsonData)
