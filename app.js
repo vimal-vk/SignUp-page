@@ -1,6 +1,7 @@
 const { response } = require('express')
 const express = require('express')
 const https = require('https')
+const api = require('./api').api
 const app = express()
 
 app.use(express.urlencoded({ extended: true }))
@@ -27,10 +28,9 @@ app.post('/', (req, res) => {
       }
     ]
   }
+  var { apiServer, listId, apiKey } = api
+
   var jsonData = JSON.stringify(data)
-  var apiServer = "us20"
-  var listId = "e02d18e387"
-  var apiKey = "17c0e6c3e617ffc436bbcad32ed8ef4b-us20"
   var apiUrl = `https://${apiServer}.api.mailchimp.com/3.0/lists/${listId}`
   var options = {
     method: "POST",
